@@ -1,0 +1,325 @@
+State 0:
+## Known stack suffix:
+##
+## LR(1) items:
+prog' -> . prog [ # ]
+## Transitions:
+-- On PACKAGE shift to state 1
+-- On prog shift to state 30
+## Reductions:
+
+State 1:
+## Known stack suffix:
+## PACKAGE
+## LR(1) items:
+prog -> PACKAGE . IDENT SEMI list(decl) EOF [ # ]
+prog -> PACKAGE . IDENT SEMI IMPORT STRING SEMI list(decl) EOF [ # ]
+## Transitions:
+-- On IDENT shift to state 2
+## Reductions:
+
+State 2:
+## Known stack suffix:
+## PACKAGE IDENT
+## LR(1) items:
+prog -> PACKAGE IDENT . SEMI list(decl) EOF [ # ]
+prog -> PACKAGE IDENT . SEMI IMPORT STRING SEMI list(decl) EOF [ # ]
+## Transitions:
+-- On SEMI shift to state 3
+## Reductions:
+
+State 3:
+## Known stack suffix:
+## PACKAGE IDENT SEMI
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI . list(decl) EOF [ # ]
+prog -> PACKAGE IDENT SEMI . IMPORT STRING SEMI list(decl) EOF [ # ]
+## Transitions:
+-- On TYPE shift to state 4
+-- On IMPORT shift to state 21
+-- On list(decl) shift to state 28
+-- On decl shift to state 26
+## Reductions:
+-- On EOF
+--   reduce production list(decl) ->
+
+State 4:
+## Known stack suffix:
+## TYPE
+## LR(1) items:
+decl -> TYPE . ident STRUCT BEGIN loption(fields) END SEMI [ TYPE EOF ]
+## Transitions:
+-- On IDENT shift to state 5
+-- On ident shift to state 6
+## Reductions:
+
+State 5:
+## Known stack suffix:
+## IDENT
+## LR(1) items:
+ident -> IDENT . [ STRUCT STAR ]
+## Transitions:
+## Reductions:
+-- On STRUCT STAR
+--   reduce production ident -> IDENT
+
+State 6:
+## Known stack suffix:
+## TYPE ident
+## LR(1) items:
+decl -> TYPE ident . STRUCT BEGIN loption(fields) END SEMI [ TYPE EOF ]
+## Transitions:
+-- On STRUCT shift to state 7
+## Reductions:
+
+State 7:
+## Known stack suffix:
+## TYPE ident STRUCT
+## LR(1) items:
+decl -> TYPE ident STRUCT . BEGIN loption(fields) END SEMI [ TYPE EOF ]
+## Transitions:
+-- On BEGIN shift to state 8
+## Reductions:
+
+State 8:
+## Known stack suffix:
+## TYPE ident STRUCT BEGIN
+## LR(1) items:
+decl -> TYPE ident STRUCT BEGIN . loption(fields) END SEMI [ TYPE EOF ]
+## Transitions:
+-- On IDENT shift to state 5
+-- On varstyp shift to state 9
+-- On loption(fields) shift to state 17
+-- On ident shift to state 11
+-- On fields shift to state 20
+## Reductions:
+-- On END
+--   reduce production loption(fields) ->
+
+State 9:
+## Known stack suffix:
+## varstyp
+## LR(1) items:
+fields -> varstyp . option(SEMI) [ END ]
+fields -> varstyp . SEMI fields [ END ]
+## Transitions:
+-- On SEMI shift to state 10
+-- On option(SEMI) shift to state 16
+## Reductions:
+-- On END
+--   reduce production option(SEMI) ->
+
+State 10:
+## Known stack suffix:
+## varstyp SEMI
+## LR(1) items:
+fields -> varstyp SEMI . fields [ END ]
+option(SEMI) -> SEMI . [ END ]
+## Transitions:
+-- On IDENT shift to state 5
+-- On varstyp shift to state 9
+-- On ident shift to state 11
+-- On fields shift to state 15
+## Reductions:
+-- On END
+--   reduce production option(SEMI) -> SEMI
+
+State 11:
+## Known stack suffix:
+## ident
+## LR(1) items:
+varstyp -> ident . mgotype [ SEMI END ]
+## Transitions:
+-- On STAR shift to state 12
+-- On mgotype shift to state 14
+## Reductions:
+
+State 12:
+## Known stack suffix:
+## STAR
+## LR(1) items:
+mgotype -> STAR . IDENT [ SEMI END ]
+## Transitions:
+-- On IDENT shift to state 13
+## Reductions:
+
+State 13:
+## Known stack suffix:
+## STAR IDENT
+## LR(1) items:
+mgotype -> STAR IDENT . [ SEMI END ]
+## Transitions:
+## Reductions:
+-- On SEMI END
+--   reduce production mgotype -> STAR IDENT
+
+State 14:
+## Known stack suffix:
+## ident mgotype
+## LR(1) items:
+varstyp -> ident mgotype . [ SEMI END ]
+## Transitions:
+## Reductions:
+-- On SEMI END
+--   reduce production varstyp -> ident mgotype
+
+State 15:
+## Known stack suffix:
+## varstyp SEMI fields
+## LR(1) items:
+fields -> varstyp SEMI fields . [ END ]
+## Transitions:
+## Reductions:
+-- On END
+--   reduce production fields -> varstyp SEMI fields
+
+State 16:
+## Known stack suffix:
+## varstyp option(SEMI)
+## LR(1) items:
+fields -> varstyp option(SEMI) . [ END ]
+## Transitions:
+## Reductions:
+-- On END
+--   reduce production fields -> varstyp option(SEMI)
+
+State 17:
+## Known stack suffix:
+## TYPE ident STRUCT BEGIN loption(fields)
+## LR(1) items:
+decl -> TYPE ident STRUCT BEGIN loption(fields) . END SEMI [ TYPE EOF ]
+## Transitions:
+-- On END shift to state 18
+## Reductions:
+
+State 18:
+## Known stack suffix:
+## TYPE ident STRUCT BEGIN loption(fields) END
+## LR(1) items:
+decl -> TYPE ident STRUCT BEGIN loption(fields) END . SEMI [ TYPE EOF ]
+## Transitions:
+-- On SEMI shift to state 19
+## Reductions:
+
+State 19:
+## Known stack suffix:
+## TYPE ident STRUCT BEGIN loption(fields) END SEMI
+## LR(1) items:
+decl -> TYPE ident STRUCT BEGIN loption(fields) END SEMI . [ TYPE EOF ]
+## Transitions:
+## Reductions:
+-- On TYPE EOF
+--   reduce production decl -> TYPE ident STRUCT BEGIN loption(fields) END SEMI
+
+State 20:
+## Known stack suffix:
+## fields
+## LR(1) items:
+loption(fields) -> fields . [ END ]
+## Transitions:
+## Reductions:
+-- On END
+--   reduce production loption(fields) -> fields
+
+State 21:
+## Known stack suffix:
+## PACKAGE IDENT SEMI IMPORT
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI IMPORT . STRING SEMI list(decl) EOF [ # ]
+## Transitions:
+-- On STRING shift to state 22
+## Reductions:
+
+State 22:
+## Known stack suffix:
+## PACKAGE IDENT SEMI IMPORT STRING
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI IMPORT STRING . SEMI list(decl) EOF [ # ]
+## Transitions:
+-- On SEMI shift to state 23
+## Reductions:
+
+State 23:
+## Known stack suffix:
+## PACKAGE IDENT SEMI IMPORT STRING SEMI
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI IMPORT STRING SEMI . list(decl) EOF [ # ]
+## Transitions:
+-- On TYPE shift to state 4
+-- On list(decl) shift to state 24
+-- On decl shift to state 26
+## Reductions:
+-- On EOF
+--   reduce production list(decl) ->
+
+State 24:
+## Known stack suffix:
+## PACKAGE IDENT SEMI IMPORT STRING SEMI list(decl)
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI IMPORT STRING SEMI list(decl) . EOF [ # ]
+## Transitions:
+-- On EOF shift to state 25
+## Reductions:
+
+State 25:
+## Known stack suffix:
+## PACKAGE IDENT SEMI IMPORT STRING SEMI list(decl) EOF
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI IMPORT STRING SEMI list(decl) EOF . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production prog -> PACKAGE IDENT SEMI IMPORT STRING SEMI list(decl) EOF
+
+State 26:
+## Known stack suffix:
+## decl
+## LR(1) items:
+list(decl) -> decl . list(decl) [ EOF ]
+## Transitions:
+-- On TYPE shift to state 4
+-- On list(decl) shift to state 27
+-- On decl shift to state 26
+## Reductions:
+-- On EOF
+--   reduce production list(decl) ->
+
+State 27:
+## Known stack suffix:
+## decl list(decl)
+## LR(1) items:
+list(decl) -> decl list(decl) . [ EOF ]
+## Transitions:
+## Reductions:
+-- On EOF
+--   reduce production list(decl) -> decl list(decl)
+
+State 28:
+## Known stack suffix:
+## PACKAGE IDENT SEMI list(decl)
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI list(decl) . EOF [ # ]
+## Transitions:
+-- On EOF shift to state 29
+## Reductions:
+
+State 29:
+## Known stack suffix:
+## PACKAGE IDENT SEMI list(decl) EOF
+## LR(1) items:
+prog -> PACKAGE IDENT SEMI list(decl) EOF . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   reduce production prog -> PACKAGE IDENT SEMI list(decl) EOF
+
+State 30:
+## Known stack suffix:
+## prog
+## LR(1) items:
+prog' -> prog . [ # ]
+## Transitions:
+## Reductions:
+-- On #
+--   accept prog
+

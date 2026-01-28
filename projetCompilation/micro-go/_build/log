@@ -1,0 +1,156 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/tp-home003/apourc1/.cache/dune/db
+# Workspace root:
+# /home/tp-home003/bf4cd9ab-7a61-42ae-a518-585d374e1da2/L3/compil/micro-go
+# Auto-detected concurrency: 12
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /opt/opam/4.14.1/bin/ocamlc.opt -config > /var/tmp/dune_f2f8c9_output
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamllex -q -o mgolexer.ml mgolexer.mll)
+$ (cd _build/default && /opt/opam/4.14.1/bin/menhir --explain --dump mgoparser.mly --base mgoparser --infer-write-query mgoparser__mock.ml.mock)
+> File "mgoparser.mly", line 14, characters 7-11:
+> Warning: the token LPAR is unused.
+> File "mgoparser.mly", line 14, characters 12-16:
+> Warning: the token RPAR is unused.
+> File "mgoparser.mly", line 49, characters 0-4:
+> Warning: symbol expr is unreachable from any of the start symbol(s).
+> File "mgoparser.mly", line 53, characters 0-9:
+> Warning: symbol expr_desc is unreachable from any of the start symbol(s).
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamldep.opt -modules -impl mgoc.ml) > _build/default/.mgoc.eobjs/dune__exe__Mgoc.impl.d
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamldep.opt -modules -impl mgoparser__mock.ml.mock) > _build/default/.mgoc.eobjs/mgoparser__mock.impl.d
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamldep.opt -modules -impl mgolexer.ml) > _build/default/.mgoc.eobjs/dune__exe__Mgolexer.impl.d
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamldep.opt -modules -impl typechecker.ml) > _build/default/.mgoc.eobjs/dune__exe__Typechecker.impl.d
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamldep.opt -modules -impl mgoast.ml) > _build/default/.mgoc.eobjs/dune__exe__Mgoast.impl.d
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I .mgoc.eobjs/byte -no-alias-deps -opaque -o .mgoc.eobjs/byte/dune__exe.cmo -c -impl .mgoc.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .mgoc.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o .mgoc.eobjs/byte/dune__exe__Mgoast.cmo -c -impl mgoast.ml)
+$ (cd _build/.sandbox/423bf268d0a4a9ba39bf6d1fbaa448d9/default && /opt/opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .mgoc.eobjs/byte -open Dune__exe -short-paths -i -impl mgoparser__mock.ml.mock) > _build/.sandbox/423bf268d0a4a9ba39bf6d1fbaa448d9/default/mgoparser__mock.mli.inferred
+> File "mgoparser.mly", line 3, characters 2-13:
+> Warning 33 [unused-open]: unused open Stdlib.Lexing.
+$ (cd _build/default && /opt/opam/4.14.1/bin/menhir --explain --dump mgoparser.mly --base mgoparser --infer-read-reply mgoparser__mock.mli.inferred)
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamldep.opt -modules -intf mgoparser.mli) > _build/default/.mgoc.eobjs/dune__exe__Mgoparser.intf.d
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamldep.opt -modules -impl mgoparser.ml) > _build/default/.mgoc.eobjs/dune__exe__Mgoparser.impl.d
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I .mgoc.eobjs/byte -I .mgoc.eobjs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o .mgoc.eobjs/native/dune__exe.cmx -c -impl .mgoc.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .mgoc.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o .mgoc.eobjs/byte/dune__exe__Mgoparser.cmi -c -intf mgoparser.mli)
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .mgoc.eobjs/byte -I .mgoc.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o .mgoc.eobjs/native/dune__exe__Mgoast.cmx -c -impl mgoast.ml)
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .mgoc.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o .mgoc.eobjs/byte/dune__exe__Typechecker.cmo -c -impl typechecker.ml)
+> File "typechecker.ml", line 27, characters 10-13:
+> 27 | let prog (fmt,ld) =
+>                ^^^
+> Warning 27 [unused-var-strict]: unused variable fmt.
+> File "typechecker.ml", line 33, characters 25-28:
+> 33 |                     | Fun(f)   -> failwith "à compléter")
+>                               ^^^
+> Warning 27 [unused-var-strict]: unused variable f.
+> File "typechecker.ml", line 36, characters 6-15:
+> 36 |   let check_typ t = failwith "case not implemented in check_typ"
+>            ^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_typ.
+> File "typechecker.ml", line 36, characters 16-17:
+> 36 |   let check_typ t = failwith "case not implemented in check_typ"
+>                      ^
+> Warning 27 [unused-var-strict]: unused variable t.
+> File "typechecker.ml", line 38, characters 19-21:
+> 38 |   let check_fields lf = failwith "case not implemented in check_fields"
+>                         ^^
+> Warning 27 [unused-var-strict]: unused variable lf.
+> File "typechecker.ml", line 40, characters 10-20:
+> 40 |   let rec check_expr e typ tenv =
+>                ^^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_expr.
+> File "typechecker.ml", line 44, characters 6-15:
+> 44 |   and type_expr e tenv = match e.edesc with
+>            ^^^^^^^^^
+> Warning 26 [unused-var]: unused variable type_expr.
+> File "typechecker.ml", line 44, characters 18-22:
+> 44 |   and type_expr e tenv = match e.edesc with
+>                        ^^^^
+> Warning 27 [unused-var-strict]: unused variable tenv.
+> File "typechecker.ml", line 50, characters 10-21:
+> 50 |   let rec check_instr i ret tenv = match i.idesc with
+>                ^^^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_instr.
+> File "typechecker.ml", line 52, characters 6-15:
+> 52 |   and check_seq s ret tenv =
+>            ^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_seq.
+> File "typechecker.ml", line 50, characters 24-27:
+> 50 |   let rec check_instr i ret tenv = match i.idesc with
+>                              ^^^
+> Warning 27 [unused-var-strict]: unused variable ret.
+> File "typechecker.ml", line 50, characters 28-32:
+> 50 |   let rec check_instr i ret tenv = match i.idesc with
+>                                  ^^^^
+> Warning 27 [unused-var-strict]: unused variable tenv.
+> File "typechecker.ml", line 56, characters 21-22:
+> 56 |   let check_function f = failwith "case not implemented in check_function"
+>                           ^
+> Warning 27 [unused-var-strict]: unused variable f.
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .mgoc.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o .mgoc.eobjs/byte/dune__exe__Mgolexer.cmo -c -impl mgolexer.ml)
+> File "mgolexer.mll", line 11, characters 20-24:
+> Error: Unbound constructor ELSE
+[2]
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .mgoc.eobjs/byte -I .mgoc.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o .mgoc.eobjs/native/dune__exe__Mgoparser.cmx -c -impl mgoparser.ml)
+> File "mgoparser.mly", line 3, characters 2-13:
+> Warning 33 [unused-open]: unused open Stdlib.Lexing.
+$ (cd _build/default && /opt/opam/4.14.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .mgoc.eobjs/byte -I .mgoc.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o .mgoc.eobjs/native/dune__exe__Typechecker.cmx -c -impl typechecker.ml)
+> File "typechecker.ml", line 27, characters 10-13:
+> 27 | let prog (fmt,ld) =
+>                ^^^
+> Warning 27 [unused-var-strict]: unused variable fmt.
+> File "typechecker.ml", line 33, characters 25-28:
+> 33 |                     | Fun(f)   -> failwith "à compléter")
+>                               ^^^
+> Warning 27 [unused-var-strict]: unused variable f.
+> File "typechecker.ml", line 36, characters 6-15:
+> 36 |   let check_typ t = failwith "case not implemented in check_typ"
+>            ^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_typ.
+> File "typechecker.ml", line 36, characters 16-17:
+> 36 |   let check_typ t = failwith "case not implemented in check_typ"
+>                      ^
+> Warning 27 [unused-var-strict]: unused variable t.
+> File "typechecker.ml", line 38, characters 19-21:
+> 38 |   let check_fields lf = failwith "case not implemented in check_fields"
+>                         ^^
+> Warning 27 [unused-var-strict]: unused variable lf.
+> File "typechecker.ml", line 40, characters 10-20:
+> 40 |   let rec check_expr e typ tenv =
+>                ^^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_expr.
+> File "typechecker.ml", line 44, characters 6-15:
+> 44 |   and type_expr e tenv = match e.edesc with
+>            ^^^^^^^^^
+> Warning 26 [unused-var]: unused variable type_expr.
+> File "typechecker.ml", line 44, characters 18-22:
+> 44 |   and type_expr e tenv = match e.edesc with
+>                        ^^^^
+> Warning 27 [unused-var-strict]: unused variable tenv.
+> File "typechecker.ml", line 50, characters 10-21:
+> 50 |   let rec check_instr i ret tenv = match i.idesc with
+>                ^^^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_instr.
+> File "typechecker.ml", line 52, characters 6-15:
+> 52 |   and check_seq s ret tenv =
+>            ^^^^^^^^^
+> Warning 26 [unused-var]: unused variable check_seq.
+> File "typechecker.ml", line 50, characters 24-27:
+> 50 |   let rec check_instr i ret tenv = match i.idesc with
+>                              ^^^
+> Warning 27 [unused-var-strict]: unused variable ret.
+> File "typechecker.ml", line 50, characters 28-32:
+> 50 |   let rec check_instr i ret tenv = match i.idesc with
+>                                  ^^^^
+> Warning 27 [unused-var-strict]: unused variable tenv.
+> File "typechecker.ml", line 56, characters 21-22:
+> 56 |   let check_function f = failwith "case not implemented in check_function"
+>                           ^
+> Warning 27 [unused-var-strict]: unused variable f.
