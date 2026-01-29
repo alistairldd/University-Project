@@ -1,21 +1,21 @@
 # University-Project
-A new repository in which all of my projects can be found.
+You can find here any if my university project.
 
 ---- 
 
 projetIleMaudite : 
 
-This project was made with a pair.
+This project was made in pair.
 
 In this project, we were reproducing the board game L'ile Maudite.
 
-This was made in Java
+Made in Java.
 
 ----
 
 projetHuffman : 
 
-This project was made with my pair Wang Marc.
+This project was made in pair.
 
 In this project, we were aiming to reproduce Huffman's algorithm, in order to compress files.
 
@@ -42,6 +42,8 @@ In this project we made a parser and a lexer, and also a compilor that translate
 
 You can find the report (in French) in the folder.
 
+Made in OCaml.
+
 ----
 
 projetMummy :
@@ -50,7 +52,7 @@ This project was made with my pair Wang Marc.
 
 In this project, we have realised a 3D game in which we can move in a 3D scene and our goal is to explore a labyrinth, with at least one mummy inside. Good Luck !
 
-Projet réalisé en pseudo java sur l'application processing.
+Made in pseudo java on the app processing.
 
 ----
 
