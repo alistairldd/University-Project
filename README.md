@@ -1,5 +1,5 @@
 # University-Project
-You can find here any if my university project.
+You can find here any of my university project.
 
 ---- 
 
