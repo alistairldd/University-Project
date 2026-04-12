@@ -1,0 +1,186 @@
+[
+    {
+        "id": 1,
+        "nom": " Suite Horizon ",
+        "prix": "50000",
+        "nbPlaces": "5",
+        "superficie": "50",
+        "equipements": "Cuisine, Wifi, Animaux accept\u00e9s, T\u00e9l\u00e9vision, Lave-linge, S\u00e8che-linge, R\u00e9frig\u00e9rateur, Four \u00e0 micro-ondes, Syst\u00e8me audio",
+        "occupation": [],
+        "old_occupation": [
+            {
+                "debut": "2026-03-05",
+                "fin": "2026-03-15",
+                "idClient": 4,
+                "raison": "Expir\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nom": " Suite Arianne",
+        "prix": "30000",
+        "nbPlaces": "2",
+        "superficie": "40",
+        "equipements": "Cuisine, Wifi, Jacuzzi, Animaux accept\u00e9s, T\u00e9l\u00e9vision, Lave-linge, Baignoire, Jardin, Chemin\u00e9e, S\u00e8che-cheveux",
+        "occupation": [
+            {
+                "debut": "2026-04-02",
+                "fin": "2026-05-02",
+                "idClient": 1
+            }
+        ],
+        "old_occupation": [
+            {
+                "debut": "2026-03-19",
+                "fin": "2026-03-20",
+                "idClient": 5,
+                "raison": "Expir\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nom": " Suite Selene",
+        "prix": "40000",
+        "nbPlaces": "3",
+        "superficie": "45",
+        "equipements": "Piscine, D\u00e9p\u00f4t de bagages autoris\u00e9, Animaux accept\u00e9s, Salle de sport, Wifi, Climatisation, T\u00e9l\u00e9vision, S\u00e8che-cheveux",
+        "occupation": [
+            {
+                "debut": "2026-05-08",
+                "fin": "2026-07-24",
+                "idClient": 6
+            },
+            {
+                "debut": "2026-08-01",
+                "fin": "2026-08-05",
+                "idClient": 11
+            }
+        ],
+        "old_occupation": [
+            {
+                "debut": "2025-12-28",
+                "fin": "2026-01-02",
+                "idClient": 7,
+                "raison": "Expir\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nom": " Suite Artemis",
+        "prix": "60000",
+        "nbPlaces": "4",
+        "superficie": "55",
+        "equipements": "Cuisine, Wifi, Piscine priv\u00e9e, Jacuzzi priv\u00e9, Sauna priv\u00e9, TV HD avec Netflix, Arri\u00e8re-cour priv\u00e9e, R\u00e9frig\u00e9rateur, Four \u00e0 micro-ondes, Cam\u00e9ras de surveillance ext\u00e9rieures pr\u00e9sentes sur place",
+        "occupation": [
+            {
+                "debut": "2026-05-01",
+                "fin": "2026-05-15",
+                "idClient": 2
+            }
+        ],
+        "old_occupation": []
+    },
+    {
+        "id": 5,
+        "nom": " Suite Cynthia",
+        "prix": "20000",
+        "nbPlaces": "2",
+        "superficie": "40",
+        "equipements": "TV, Wi-Fi",
+        "occupation": [],
+        "old_occupation": [
+            {
+                "debut": "2025-04-02",
+                "fin": "2025-09-02",
+                "idClient": 9,
+                "raison": "Expir\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nom": " Suite Endymion",
+        "prix": "45000",
+        "nbPlaces": "5",
+        "superficie": "50",
+        "equipements": "Cuisine, Wifi rapide, T\u00e9l\u00e9vision, Monte-charge, Lave-linge, Climatisation",
+        "occupation": [
+            {
+                "debut": "2026-05-08",
+                "fin": "2026-07-24",
+                "idClient": 3,
+                "raison": "Expir\u00e9"
+            }
+        ],
+        "old_occupation": []
+    },
+    {
+        "id": 7,
+        "nom": " Suite Lunaria",
+        "prix": "55000",
+        "nbPlaces": "3",
+        "superficie": "45",
+        "equipements": "Wifi, Espace de travail d\u00e9di\u00e9, Piscine, T\u00e9l\u00e9vision, Lave-linge, Patio ou balcon, Chemin\u00e9e",
+        "occupation": [
+            {
+                "debut": "2026-08-01",
+                "fin": "2026-09-01",
+                "idClient": 8
+            }
+        ],
+        "old_occupation": []
+    },
+    {
+        "id": 8,
+        "nom": " Suite Apollo",
+        "prix": "70000",
+        "nbPlaces": "4",
+        "superficie": "60",
+        "equipements": "Vue panoramique sur la Terre, Wifi haut d\u00e9bit, Syst\u00e8me de recyclage d'air Premium, Cuisine \u00e9quip\u00e9e, Domotique vocale, Douche \u00e0 hydromassage",
+        "occupation": [],
+        "old_occupation": []
+    },
+    {
+        "id": 9,
+        "nom": " Suite Galaxie",
+        "prix": "35000",
+        "nbPlaces": "2",
+        "superficie": "35",
+        "equipements": "T\u00e9l\u00e9scope priv\u00e9, Wifi, Mini-bar, Lit \u00e0 m\u00e9moire de forme, Climatisation, Musique d'ambiance spatiale",
+        "occupation": [],
+        "old_occupation": []
+    },
+    {
+        "id": 10,
+        "nom": " Suite Orion",
+        "prix": "50000",
+        "nbPlaces": "6",
+        "superficie": "75",
+        "equipements": "Cuisine familiale, Wifi, Grand Salon, Projecteur cin\u00e9ma, Jacuzzi, Salle de jeux, Robot majordome, Blanchisserie automatique",
+        "occupation": [],
+        "old_occupation": []
+    },
+    {
+        "id": 11,
+        "nom": " Suite Nebula",
+        "prix": "40000",
+        "nbPlaces": "4",
+        "superficie": "55",
+        "equipements": "Cuisine, Wifi, Piscine priv\u00e9e, Jacuzzi priv\u00e9, Sauna priv\u00e9, TV HD avec Netflix, Arri\u00e8re-cour priv\u00e9e, R\u00e9frig\u00e9rateur, Four \u00e0 micro-ondes, Cam\u00e9ras de surveillance ext\u00e9rieures pr\u00e9sentes sur place",
+        "occupation": [],
+        "old_occupation": []
+    },
+    {
+        "id": 12,
+        "nom": " Suite Cosmos",
+        "prix": "25000",
+        "nbPlaces": "3",
+        "superficie": "45",
+        "equipements": "Piscine, D\u00e9p\u00f4t de bagages autoris\u00e9, Animaux accept\u00e9s, Salle de sport, Wifi, Climatisation, T\u00e9l\u00e9vision, S\u00e8che-cheveux",
+        "occupation": [],
+        "old_occupation": []
+    }
+]

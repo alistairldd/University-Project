@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "email": "marc@gogo.com",
+        "mdp": "blo",
+        "admin": true
+    },
+    {
+        "id": 2,
+        "email": "alistair@gogo.com",
+        "mdp": "bli",
+        "admin": true
+    },
+    {
+        "id": 3,
+        "email": "frederic@gogo.com",
+        "mdp": "bla",
+        "iddemande": 3
+    },
+    {
+        "id": 4,
+        "email": "michel.legrand@bureau.fr",
+        "mdp": "5vSPjuBM",
+        "iddemande": 1
+    },
+    {
+        "id": 5,
+        "email": "jeanne.dubois@service.com",
+        "mdp": "Ly5D5dPr",
+        "iddemande": 2
+    },
+    {
+        "id": 6,
+        "email": "milo.vauclair@perso.fr",
+        "mdp": "V7zrofxq",
+        "iddemande": 4
+    },
+    {
+        "id": 7,
+        "email": "reina.masri@webmail.com",
+        "mdp": "qVci9Mfb",
+        "iddemande": 5
+    },
+    {
+        "id": 8,
+        "email": "jean.bernard@mail.com",
+        "mdp": "xhiE7nFI",
+        "iddemande": 6
+    },
+    {
+        "id": 9,
+        "email": "fredo@gmail.com",
+        "mdp": "6Px2tOge",
+        "iddemande": 11
+    },
+    {
+        "id": 10,
+        "email": "luc.gourmand@restauration.net",
+        "mdp": "Wkzi4DX7",
+        "iddemande": 10
+    },
+    {
+        "id": 11,
+        "email": "fred@gmail.com",
+        "mdp": "0ZnY08Xh",
+        "iddemande": 11
+    }
+]

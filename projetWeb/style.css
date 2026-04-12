@@ -1,0 +1,639 @@
+/*-------------------------------------------------------------
+------------------------- STYLE GENERAL ------------------------
+--------------------------------------------------------------- */
+
+.scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+#bgLune {
+    background-image: url('images/lune2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-attachment: fixed;
+    min-height: 90vh;
+    margin: 0;
+}
+
+
+.Titre {
+    text-align: center;
+}
+
+.Principale {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+
+    border: 1px solid white;
+    border-radius: 10px;
+    min-height: 80vh;
+    padding-top: 20px;
+    font-size: 28px;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+        1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+
+}
+
+
+.bouton {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+#boutonConnexion,
+#boutonRetour {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+
+}
+
+/*-------------------------------------------------------------
+------------------------- STYLE INDEX ------------------------
+--------------------------------------------------------------- */
+
+#validerConnexion {
+    margin-top: 10px;
+}
+
+/* Message d'erreur de connexion */
+#messageErreur {
+    display: none;
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* disponibilité des capsules */
+#msg-dispo {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: none;
+}
+
+/* Message quand dispo */
+.dispo-ok {
+    background-color: #ccffcc;
+    color: #006600;
+    border: 1px solid #006600;
+
+}
+
+/* Message quand pas dispo */
+.dispo-no {
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+}
+
+.input,
+#boutonAPrestations,
+#boutonCPrestations {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#boutonAPrestations:hover,
+#boutonCPrestations:hover {
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+#prestations {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#commentaire {
+
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    min-height: 60px;
+    box-sizing: border-box;
+}
+
+
+#demandeVoyage {
+    text-align: left;
+
+}
+
+#demander {
+    display: block;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 20px auto;
+    width: 80%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.demander-ok {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+.demander-no {
+    background-color: #cc0000;
+    cursor: pointer;
+}
+
+
+.demander-ok:hover {
+    background-color: #45a049;
+}
+
+.demander-no:hover {
+    background-color: #8b0000;
+}
+
+/*-------------------------------------------------------------
+------------------------- STYLE ADMIN ------------------------
+--------------------------------------------------------------- */
+
+.PrincipaleAdmin {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 80vh;
+    padding-top: 10px;
+}
+
+/* Layout admin : sidebar gauche + contenu à droite */
+.admin-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    position: sticky;
+    top: 20px;
+}
+
+.tab-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    padding: 12px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.tab-btn.active {
+    background: #2b2b2b;
+    border-color: #fff;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.02);
+}
+
+/* zone principale de contenu */
+.content-area {
+    flex: 1;
+    min-height: 60vh;
+}
+
+.tab-section {
+    display: flex;
+}
+
+.container-details {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.contenu-details {
+    color: #eee;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+    overflow-wrap: break-word;
+    max-width: 400px;
+
+}
+
+.demande-actions button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#demandes {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    min-height: 400px;
+}
+
+#chambres {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    min-height: 400px;
+}
+
+#voyages {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    min-height: 400px;
+}
+
+#voyages table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+#voyages th,
+#voyages td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+.voyages-block h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#activites {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    min-height: 400px;
+}
+
+#messageEnvoi {
+    display: none;
+    color: white;
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    min-height: 200px;
+    max-height: 60vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    min-width: 420px;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.copy-btn {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.copy-btn:hover {
+    background: #45a049;
+}
+
+.message-content {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.message-password {
+    color: #ffd700;
+    font-weight: 700;
+}
+
+
+#demandes th {
+    border: none;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+}
+
+#demandes td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+#demandes table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+/*-------------------------------------------------------------
+------------------------- STYLE CLIENT ------------------------
+--------------------------------------------------------------- */
+
+.bgClient {
+    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+
+}
+
+.PrincipaleClient {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+
+    border: 1px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    color: white;
+
+    min-height: 97vh;
+}
+
+.Conteneur {
+    display: flex;
+    flex-direction: row;
+    /* On force la ligne */
+    justify-content: space-between;
+    /* L'un à gauche, l'autre à droite */
+    align-items: flex-start;
+    /* On les aligne en haut */
+    width: 100%;
+    overflow: hidden;
+}
+
+#Panier {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin-left: auto;
+    margin-right: 20px;
+
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: black;
+    height: 85vh;
+    min-height: 100%;
+}
+
+#voirPanier:hover {
+    transform: scale(1.1);
+    /* L'icône grossit légèrement */
+    transition: 0.3s;
+}
+
+#liste-articles,
+#liste-presta {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
+    width: 100%;
+    margin-right: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* Permet de faire défiler si la liste est trop longue */
+}
+
+.article-panier {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+}
+
+.cumul {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+#barre-prix {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid white;
+    margin-top: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#payer {
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#payer:hover {
+    background-color: #45a049;
+}
+
+#achat {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin-left: 20px;
+    margin-right: auto;
+    width: 60%;
+
+}
+
+#achattxt {
+    text-align: left;
+}
+
+#zone-acti-client{
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    z-index: 100;
+    width: 50%;
+    box-shadow: 0 0 20px black;
+    background-color: #090a0f;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.item-chambre {
+    display: flex;
+    margin-left: 10 px;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    width: 25vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    margin-left: 10px;
+    min-height: 90vh;
+
+}
+
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.background-chambres {
+    position: absolute;
+    width: 99vw; 
+    height: 100vh; 
+
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+
+    z-index: -1; 
+
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+
+}
+
+.background-visible {
+    opacity: 1;
+}
+
+#bouton-droite {
+    margin-left: auto;
+}
+
+#bouton-reserver {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+.dot.active {
+    background-color: white;
+    transform: scale(1.3);
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+#zone-validation-activite {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 100;
+    width: 40%;
+    box-shadow: 0 0 20px black;
+    background-color: #090a0f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#cas-multi-joueurs {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#details-activite {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 100;
+    width: 40%;
+    box-shadow: 0 0 20px black;
+    background-color: #090a0f;
+    padding: 20px;
+    border-radius: 10px;
+}

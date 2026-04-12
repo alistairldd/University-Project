@@ -1,0 +1,159 @@
+[
+    {
+        "id": 1,
+        "email": "michel.legrand@bureau.fr",
+        "dateDeb": "2026-03-05",
+        "dateFin": "2026-03-15",
+        "nbPersonnes": 5,
+        "transport": "\u00c9conomie",
+        "prestations": [
+            "Petit d\u00e9jeuner"
+        ],
+        "commentaire": "",
+        "traite": true
+    },
+    {
+        "id": 2,
+        "email": "jeanne.dubois@service.com",
+        "dateDeb": "2026-03-19",
+        "dateFin": "2026-03-20",
+        "nbPersonnes": 2,
+        "transport": "\u00c9conomie",
+        "prestations": [
+            "Petit d\u00e9jeuner",
+            "D\u00eener"
+        ],
+        "commentaire": "Arriv\u00e9e tardive pr\u00e9vue.",
+        "traite": true
+    },
+    {
+        "id": 3,
+        "email": "frederic@gogo.com",
+        "dateDeb": "2026-05-08",
+        "dateFin": "2026-07-24",
+        "nbPersonnes": 3,
+        "transport": "Premium Deluxe",
+        "prestations": [
+            "Navette",
+            "Petit d\u00e9jeuner",
+            "D\u00e9jeuner",
+            "D\u00eener"
+        ],
+        "commentaire": "R\u00e9gime sp\u00e9cifique : sans gluten, sans porc, sans poisson.",
+        "traite": true
+    },
+    {
+        "id": 4,
+        "email": "milo.vauclair@perso.fr",
+        "dateDeb": "2026-06-01",
+        "dateFin": "2026-06-10",
+        "nbPersonnes": 4,
+        "transport": "\u00c9conomie",
+        "prestations": [
+            "Petit d\u00e9jeuner",
+            "D\u00eener"
+        ],
+        "commentaire": "Demande de chambres communicantes.",
+        "traite": true
+    },
+    {
+        "id": 5,
+        "email": "reina.masri@webmail.com",
+        "dateDeb": "2026-07-15",
+        "dateFin": "2026-07-20",
+        "nbPersonnes": 2,
+        "transport": "Deluxe",
+        "prestations": [
+            "Navette",
+            "Petit d\u00e9jeuner",
+            "D\u00e9jeuner",
+            "D\u00eener"
+        ],
+        "commentaire": "",
+        "traite": true
+    },
+    {
+        "id": 6,
+        "email": "jean.bernard@mail.com",
+        "dateDeb": "2026-08-10",
+        "dateFin": "2026-08-15",
+        "nbPersonnes": 1,
+        "transport": "\u00c9conomie",
+        "prestations": [
+            "Petit d\u00e9jeuner"
+        ],
+        "commentaire": "",
+        "traite": true
+    },
+    {
+        "id": 7,
+        "email": "jb.vincent@club-echecs.fr",
+        "dateDeb": "2026-09-01",
+        "dateFin": "2026-09-05",
+        "nbPersonnes": 2,
+        "transport": "Premium Deluxe",
+        "prestations": [
+            "Navette",
+            "Petit d\u00e9jeuner",
+            "D\u00e9jeuner",
+            "D\u00eener"
+        ],
+        "commentaire": "Demande de lit double.",
+        "traite": false
+    },
+    {
+        "id": 8,
+        "email": "pierre.martin@info.com",
+        "dateDeb": "2026-09-15",
+        "dateFin": "2026-09-20",
+        "nbPersonnes": 5,
+        "transport": "\u00c9conomie",
+        "prestations": [
+            "Petit d\u00e9jeuner"
+        ],
+        "commentaire": "Demande de lits jumeaux.",
+        "traite": false
+    },
+    {
+        "id": 9,
+        "email": "helene.mama@pro.com",
+        "dateDeb": "2026-04-15",
+        "dateFin": "2026-04-18",
+        "nbPersonnes": 3,
+        "transport": "\u00c9conomie",
+        "prestations": [
+            "Petit d\u00e9jeuner"
+        ],
+        "commentaire": "Accompagn\u00e9e d'un petit chien.",
+        "traite": false
+    },
+    {
+        "id": 10,
+        "email": "luc.gourmand@restauration.net",
+        "dateDeb": "2026-04-05",
+        "dateFin": "2026-04-15",
+        "nbPersonnes": 1,
+        "transport": "Premium Deluxe",
+        "prestations": [
+            "Navette",
+            "Petit d\u00e9jeuner",
+            "D\u00e9jeuner",
+            "D\u00eener"
+        ],
+        "commentaire": "Grand gourmand, allergies multiples (gluten, haricots).",
+        "traite": true
+    },
+    {
+        "id": 11,
+        "email": "fred@gmail.com",
+        "dateDeb": "2026-08-01",
+        "dateFin": "2026-08-05",
+        "nbPersonnes": 2,
+        "transport": "\u00c9conomie",
+        "prestations": [
+            "Petit d\u00e9jeuner"
+        ],
+        "commentaire": "Cest cher !",
+        "traite": true
+    }
+]

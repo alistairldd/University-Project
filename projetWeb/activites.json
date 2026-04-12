@@ -1,0 +1,166 @@
+{
+    "demandes": [
+        {
+            "idClient": 3,
+            "email": "frederic@gogo.com",
+            "nbParticipants": 2,
+            "type": "Badminton Lunaire",
+            "date": "2026-05-15",
+            "commentaire": "",
+            "statut": "en_attente"
+        },
+        {
+            "idClient": 3,
+            "email": "frederic@gogo.com",
+            "nbParticipants": 1,
+            "type": "Sortie en Rover",
+            "date": "2026-05-21",
+            "commentaire": "",
+            "statut": "en_attente"
+        },
+        {
+            "idClient": 1,
+            "email": "michel.legrand@bureau.fr",
+            "nbParticipants": 2,
+            "type": "Natation Lunaire",
+            "date": "2026-03-08",
+            "commentaire": "",
+            "statut": "validee"
+        },
+        {
+            "idClient": 2,
+            "email": "jeanne.dubois@service.com",
+            "nbParticipants": 2,
+            "type": "Tennis Lunaire",
+            "date": "2026-03-19",
+            "commentaire": "Je suis une grande fan de tennis, j'esp\u00e8re que les conditions seront optimales !",
+            "statut": "validee"
+        },
+        {
+            "idClient": 4,
+            "email": "milo.vauclair@perso.fr",
+            "nbParticipants": 4,
+            "type": "Sortie en Rover",
+            "date": "2026-06-05",
+            "commentaire": "Je souhaite explorer les environs du crat\u00e8re Tycho.",
+            "statut": "en_attente"
+        },
+        {
+            "idClient": 5,
+            "email": "reina.masri@webmail.com",
+            "nbParticipants": 2,
+            "type": "Saut en hauteur Lunaire",
+            "date": "2026-07-17",
+            "commentaire": "Je suis une grand fan de saut en hauteur, j'esp\u00e8re que les conditions seront optimales !",
+            "statut": "en_attente"
+        },
+        {
+            "idClient": 6,
+            "email": "jean.bernard@mail.com",
+            "nbParticipants": 1,
+            "type": "Sortie",
+            "date": "2026-08-12",
+            "commentaire": "Je suis frileux",
+            "statut": "en_attente"
+        },
+        {
+            "idClient": 3,
+            "email": "frederic@gogo.com",
+            "nbParticipants": "3",
+            "type": "Tennis Lunaire",
+            "date": "2026-05-08",
+            "commentaire": "On est 3 mais c'est pas grave",
+            "statut": "validee"
+        },
+        {
+            "idClient": 3,
+            "email": "frederic@gogo.com",
+            "nbParticipants": "3",
+            "type": "Tennis Lunaire",
+            "date": "2026-05-10",
+            "commentaire": "",
+            "statut": "validee"
+        },
+        {
+            "idClient": 9,
+            "email": "fredo@gmail.com",
+            "nbParticipants": "3",
+            "type": "Tennis Lunaire",
+            "date": "2026-04-11",
+            "commentaire": "Je suis tr\u00e8s sportif et je veux me mesurer \u00e0 d'autres personnes avec ma famille",
+            "statut": "validee"
+        },
+        {
+            "idClient": 4,
+            "email": "milo.vauclair@perso.fr",
+            "nbParticipants": "1",
+            "type": "Tennis Lunaire",
+            "date": "2026-04-11",
+            "commentaire": "J'ai pas d'ami et je suis fort",
+            "statut": "validee"
+        },
+        {
+            "idClient": 11,
+            "email": "fred@gmail.com",
+            "nbParticipants": "2",
+            "type": "Tennis Lunaire",
+            "date": "2026-08-05",
+            "commentaire": "D\u00e9butant",
+            "statut": "validee"
+        }
+    ],
+    "prevues": [
+        {
+            "id": "5f9b8c7d9e0f1",
+            "type": "Badminton Lunaire",
+            "date": "2026-05-15",
+            "animateur": "Alice",
+            "participants": [
+                "frederic@gogo.com"
+            ],
+            "nbParticipants": 2
+        },
+        {
+            "id": "69d6aa5f62795",
+            "type": "Tennis Lunaire",
+            "date": "2026-05-08",
+            "animateur": "Alice",
+            "participants": [
+                "frederic@gogo.com"
+            ],
+            "nbParticipants": 2
+        },
+        {
+            "id": "69d6b21f63631",
+            "type": "Tennis Lunaire",
+            "date": "2026-05-10",
+            "animateur": "Alice",
+            "participants": [
+                "frederic@gogo.com"
+            ],
+            "nbParticipants": 3
+        },
+        {
+            "id": "69d763c76ab35",
+            "type": "Tennis Lunaire",
+            "date": "2026-04-11",
+            "animateur": "Alice",
+            "participants": [
+                "fredo@gmail.com",
+                "milo.vauclair@perso.fr"
+            ],
+            "nbParticipants": 4
+        },
+        {
+            "id": "69d7761095b77",
+            "type": "Tennis Lunaire",
+            "date": "2026-08-05",
+            "animateur": "David",
+            "participants": [
+                "fred@gmail.com"
+            ],
+            "nbParticipants": 2
+        }
+    ],
+    "expirees": []
+}
